@@ -14,19 +14,18 @@ def is_palindrome(word):
                  return False
    return True
 
-
 #print (str(10000*10000)+"-"+str (99999*99999))
 
-def func (a,mn1,mn2):
+def func (a):
     flag=False
     b=99999
     while ( flag==False and b>10000):
         if (prime(b)==1):
             print(str(b)+" "+str(a%b))
             if ((a%b)==0):
-                if (prime(a/b)==1):
-                    mn1=b
-                    mn2=a/b
+                c=a//b
+                if ((prime(c))==1):
+                    print(str(c)+" result  "+str(b))
                     return 1
             if (b<(a/b)):
                 flag=True
@@ -35,12 +34,11 @@ def func (a,mn1,mn2):
 
 mn1=1
 mn2=1
-a=9999999999
-while (a>9000000008):
+a=9824224289
+while (a>1000000000):
     if (is_palindrome(str(a))==True):
         print(str(a))
-        if (func(a,mn1,mn2)==1):
-            print(str(a)+" "+str(mn1)+" "+str(mn2))
+        if (func(a)==1):
             a=1
     a=a-1
 
