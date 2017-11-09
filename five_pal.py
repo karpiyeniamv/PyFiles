@@ -34,7 +34,7 @@ def func (a):
 
 mn1=1
 mn2=1
-a=9824224289
+a=9778888779
 while (a>1000000000):
     if (is_palindrome(str(a))==True):
         print(str(a))
